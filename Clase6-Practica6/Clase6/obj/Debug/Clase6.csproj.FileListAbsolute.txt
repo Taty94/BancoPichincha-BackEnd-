@@ -1,0 +1,14 @@
+C:\Users\Tatiana\Desktop\BACKEND\Clase6-Deber\Clase6\Clase6\bin\Debug\Clase6.exe.config
+C:\Users\Tatiana\Desktop\BACKEND\Clase6-Deber\Clase6\Clase6\bin\Debug\Clase6.exe
+C:\Users\Tatiana\Desktop\BACKEND\Clase6-Deber\Clase6\Clase6\bin\Debug\Clase6.pdb
+C:\Users\Tatiana\Desktop\BACKEND\Clase6-Deber\Clase6\Clase6\obj\Debug\Clase6.csprojAssemblyReference.cache
+C:\Users\Tatiana\Desktop\BACKEND\Clase6-Deber\Clase6\Clase6\obj\Debug\Clase6.csproj.CoreCompileInputs.cache
+C:\Users\Tatiana\Desktop\BACKEND\Clase6-Deber\Clase6\Clase6\obj\Debug\Clase6.exe
+C:\Users\Tatiana\Desktop\BACKEND\Clase6-Deber\Clase6\Clase6\obj\Debug\Clase6.pdb
+C:\TATIANA\Banco Pichincha\BACK END\CRISTIAN YEPEZ\Clase6\Clase6\Clase6\bin\Debug\Clase6.exe.config
+C:\TATIANA\Banco Pichincha\BACK END\CRISTIAN YEPEZ\Clase6\Clase6\Clase6\bin\Debug\Clase6.exe
+C:\TATIANA\Banco Pichincha\BACK END\CRISTIAN YEPEZ\Clase6\Clase6\Clase6\bin\Debug\Clase6.pdb
+C:\TATIANA\Banco Pichincha\BACK END\CRISTIAN YEPEZ\Clase6\Clase6\Clase6\obj\Debug\Clase6.csproj.AssemblyReference.cache
+C:\TATIANA\Banco Pichincha\BACK END\CRISTIAN YEPEZ\Clase6\Clase6\Clase6\obj\Debug\Clase6.csproj.CoreCompileInputs.cache
+C:\TATIANA\Banco Pichincha\BACK END\CRISTIAN YEPEZ\Clase6\Clase6\Clase6\obj\Debug\Clase6.exe
+C:\TATIANA\Banco Pichincha\BACK END\CRISTIAN YEPEZ\Clase6\Clase6\Clase6\obj\Debug\Clase6.pdb

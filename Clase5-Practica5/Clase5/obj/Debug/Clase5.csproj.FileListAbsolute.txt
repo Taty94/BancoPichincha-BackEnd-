@@ -1,0 +1,14 @@
+C:\Users\Tatiana\Documents\Clase5\Clase5\Clase5\bin\Debug\Clase5.exe.config
+C:\Users\Tatiana\Documents\Clase5\Clase5\Clase5\bin\Debug\Clase5.exe
+C:\Users\Tatiana\Documents\Clase5\Clase5\Clase5\bin\Debug\Clase5.pdb
+C:\Users\Tatiana\Documents\Clase5\Clase5\Clase5\obj\Debug\Clase5.csprojAssemblyReference.cache
+C:\Users\Tatiana\Documents\Clase5\Clase5\Clase5\obj\Debug\Clase5.csproj.CoreCompileInputs.cache
+C:\Users\Tatiana\Documents\Clase5\Clase5\Clase5\obj\Debug\Clase5.exe
+C:\Users\Tatiana\Documents\Clase5\Clase5\Clase5\obj\Debug\Clase5.pdb
+C:\Users\Tatiana\Desktop\BACKEND\Clase5-Deber\Clase5\Clase5\bin\Debug\Clase5.exe.config
+C:\Users\Tatiana\Desktop\BACKEND\Clase5-Deber\Clase5\Clase5\bin\Debug\Clase5.exe
+C:\Users\Tatiana\Desktop\BACKEND\Clase5-Deber\Clase5\Clase5\bin\Debug\Clase5.pdb
+C:\Users\Tatiana\Desktop\BACKEND\Clase5-Deber\Clase5\Clase5\obj\Debug\Clase5.csprojAssemblyReference.cache
+C:\Users\Tatiana\Desktop\BACKEND\Clase5-Deber\Clase5\Clase5\obj\Debug\Clase5.csproj.CoreCompileInputs.cache
+C:\Users\Tatiana\Desktop\BACKEND\Clase5-Deber\Clase5\Clase5\obj\Debug\Clase5.exe
+C:\Users\Tatiana\Desktop\BACKEND\Clase5-Deber\Clase5\Clase5\obj\Debug\Clase5.pdb

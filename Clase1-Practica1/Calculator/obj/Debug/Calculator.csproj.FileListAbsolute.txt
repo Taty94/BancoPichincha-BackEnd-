@@ -1,0 +1,14 @@
+C:\Users\Tatiana\Desktop\Calculator\Calculator\bin\Debug\Calculator.exe.config
+C:\Users\Tatiana\Desktop\Calculator\Calculator\bin\Debug\Calculator.exe
+C:\Users\Tatiana\Desktop\Calculator\Calculator\bin\Debug\Calculator.pdb
+C:\Users\Tatiana\Desktop\Calculator\Calculator\obj\Debug\Calculator.csprojAssemblyReference.cache
+C:\Users\Tatiana\Desktop\Calculator\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
+C:\Users\Tatiana\Desktop\Calculator\Calculator\obj\Debug\Calculator.exe
+C:\Users\Tatiana\Desktop\Calculator\Calculator\obj\Debug\Calculator.pdb
+C:\Users\CY-len\OneDrive\Dia 1\Tatiana Montenegro\Calculator\bin\Debug\Calculator.exe.config
+C:\Users\CY-len\OneDrive\Dia 1\Tatiana Montenegro\Calculator\bin\Debug\Calculator.exe
+C:\Users\CY-len\OneDrive\Dia 1\Tatiana Montenegro\Calculator\bin\Debug\Calculator.pdb
+C:\Users\CY-len\OneDrive\Dia 1\Tatiana Montenegro\Calculator\obj\Debug\Calculator.csproj.AssemblyReference.cache
+C:\Users\CY-len\OneDrive\Dia 1\Tatiana Montenegro\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
+C:\Users\CY-len\OneDrive\Dia 1\Tatiana Montenegro\Calculator\obj\Debug\Calculator.exe
+C:\Users\CY-len\OneDrive\Dia 1\Tatiana Montenegro\Calculator\obj\Debug\Calculator.pdb
