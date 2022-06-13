@@ -5,6 +5,7 @@ using Core.Interfaces;
 using System.Linq;
 
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace Infrastructure.Data
 {
@@ -16,14 +17,50 @@ namespace Infrastructure.Data
             _context = context;
         }
 
+        public async Task<IReadOnlyList<T>> ListAllAsync()
+        {
+            return await _context.Set<T>().ToListAsync();
+        }
+
         public async Task<T> GetByIdAsync(int id)
         {
             return await _context.Set<T>().FirstAsync();
         }
 
-        public async Task<IReadOnlyList<T>> ListAllAsync()
+        public async Task<T> CreateUpdateAsync(T entityObject)
         {
-            return await _context.Set<T>().ToListAsync();
+            if(entityObject.Id>0){
+                _context.Set<T>().Update(entityObject);
+            }else
+            {
+                await _context.Set<T>().AddAsync(entityObject);
+            }
+
+            await _context.SaveChangesAsync();
+            return entityObject;
         }
+
+        public async Task<bool> DeteleAsync(int id)
+        {
+            try
+            {
+               T entityObject = await _context.Set<T>().FindAsync(id);
+               if(entityObject ==null)
+               {
+                    return false;
+                }
+                _context.Set<T>().Remove(entityObject);
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch(Exception)
+            {
+                return false;
+            }
+        }
+
+        
+
+       
     }
 }

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Infrastructure.Data.Migrations
 {
@@ -15,7 +16,7 @@ namespace Infrastructure.Data.Migrations
                     Cedula = table.Column<string>(type: "TEXT", nullable: true),
                     Nombre = table.Column<string>(type: "TEXT", nullable: true),
                     Email = table.Column<string>(type: "TEXT", nullable: true),
-                    FechaNacimiento = table.Column<string>(type: "TEXT", nullable: true),
+                    FechaNacimiento = table.Column<DateTime>(type: "TEXT", nullable: false),
                     Clave = table.Column<string>(type: "TEXT", nullable: true),
                     TipoCuenta = table.Column<int>(type: "INTEGER", nullable: false)
                 },

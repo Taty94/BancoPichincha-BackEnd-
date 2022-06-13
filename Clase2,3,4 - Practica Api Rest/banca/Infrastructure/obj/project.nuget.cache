@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "V6gavpxwhtWmpnpRaFsr40ceNgjksGNX/Ze5spEYE9bWfEjRwbhLCqJQpaEgHVPjDGEGgOTiMEhnQsySlkqc0Q==",
+  "dgSpecHash": "OUeWbtc4MjNNEL1TdtuMRy2msZt18evmlfeXGt/jx/XcFAWAobQeUiQsdrI6wkfKrXZohCCy+hnwMADCaBXHsQ==",
   "success": true,
-  "projectFilePath": "C:\\TATIANA\\Banco Pichincha\\BACK END\\CRISTIAN YEPEZ\\Clase2-3y4BE\\banca\\Infrastructure\\Infrastructure.csproj",
+  "projectFilePath": "C:\\TATIANA\\Banco Pichincha\\BACK END\\BancoPichincha-BackEnd-\\Clase2,3,4 - Practica Api Rest\\banca\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",

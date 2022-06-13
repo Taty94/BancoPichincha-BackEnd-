@@ -6,12 +6,12 @@ namespace Core.Interfaces
 {
     public interface IBancaRepository
     {
-        //Task<IReadOnlyList<Usuario>> GetUsuariosAsync();
+        Task<IReadOnlyList<Usuario>> GetUsuariosAsync();
         //Task<Usuario> GetUsuarioByIdAsync(int id);
-        Task<Usuario> CreateUpdateUsuario(Usuario Usuario);
-        Task<bool> DeleteUsuario(int id);
+        //Task<Usuario> CreateUpdateUsuario(Usuario Usuario);
+        //Task<bool> DeleteUsuario(int id);
 
-        //Cuenta
+        //CUENTAS FUNCIONES
         //Task<IReadOnlyList<Cuenta>> GetCuentasAsync();
         Task<bool> Deposito(int id, decimal deposito);
         Task<bool> Retiro(int id, decimal retiro);

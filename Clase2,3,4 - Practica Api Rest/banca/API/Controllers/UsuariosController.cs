@@ -23,13 +23,14 @@ namespace API.Controllers
         [HttpGet]
         public async Task<ActionResult<List<Usuario>>> GetUsuarios()
         {
-            var usuarios = await _genrepo.ListAllAsync();
+            //var usuarios = await _genrepo.ListAllAsync();
+            var usuarios = await _repo.GetUsuariosAsync();
             return Ok(usuarios);
         }
 
         //Get: api/Usuarios/1
         [HttpGet("{id}")]
-        public async Task<ActionResult<Usuario>> GetUsuario(int id){
+        public async Task<ActionResult<Usuario>> GetUsuarioById(int id){
             var usuario =  await _genrepo.GetByIdAsync(id);
             if(usuario==null){
                 return NotFound(false);
@@ -44,7 +45,7 @@ namespace API.Controllers
         public async Task<IActionResult> PutUsuario(int id, Usuario usuario)
         {
             try{
-                await _repo.CreateUpdateUsuario(usuario);
+                await _genrepo.CreateUpdateAsync(usuario);
                 return Ok(usuario);
             }
             catch(Exception ex)
@@ -58,8 +59,8 @@ namespace API.Controllers
         public async Task<ActionResult<Usuario>> PostUsuario(Usuario usuario)
         {
             try{
-                var user = await _repo.CreateUpdateUsuario(usuario);
-                return CreatedAtAction("GetUsuario",new {id = user.Id}, user);
+                var user = await _genrepo.CreateUpdateAsync(usuario);
+                return CreatedAtAction("GetUsuarioById",new {id = user.Id}, user);
             }
             catch(Exception ex)
             {
@@ -73,7 +74,7 @@ namespace API.Controllers
         {
             try
             {
-                bool estaEliminado = await _repo.DeleteUsuario(id);
+                bool estaEliminado = await _genrepo.DeteleAsync(id);
                 if(estaEliminado)
                 {
                     return Ok(estaEliminado);

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\TATIANA\\Banco Pichincha\\BACK END\\CRISTIAN YEPEZ\\Clase2-3y4BE\\banca\\API\\API.csproj": {}
+    "C:\\TATIANA\\Banco Pichincha\\BACK END\\BancoPichincha-BackEnd-\\Clase2,3,4 - Practica Api Rest\\banca\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\TATIANA\\Banco Pichincha\\BACK END\\CRISTIAN YEPEZ\\Clase2-3y4BE\\banca\\API\\API.csproj": {
+    "C:\\TATIANA\\Banco Pichincha\\BACK END\\BancoPichincha-BackEnd-\\Clase2,3,4 - Practica Api Rest\\banca\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\TATIANA\\Banco Pichincha\\BACK END\\CRISTIAN YEPEZ\\Clase2-3y4BE\\banca\\API\\API.csproj",
+        "projectUniqueName": "C:\\TATIANA\\Banco Pichincha\\BACK END\\BancoPichincha-BackEnd-\\Clase2,3,4 - Practica Api Rest\\banca\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\TATIANA\\Banco Pichincha\\BACK END\\CRISTIAN YEPEZ\\Clase2-3y4BE\\banca\\API\\API.csproj",
+        "projectPath": "C:\\TATIANA\\Banco Pichincha\\BACK END\\BancoPichincha-BackEnd-\\Clase2,3,4 - Practica Api Rest\\banca\\API\\API.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\TATIANA\\Banco Pichincha\\BACK END\\CRISTIAN YEPEZ\\Clase2-3y4BE\\banca\\API\\obj\\",
+        "outputPath": "C:\\TATIANA\\Banco Pichincha\\BACK END\\BancoPichincha-BackEnd-\\Clase2,3,4 - Practica Api Rest\\banca\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\TATIANA\\Banco Pichincha\\BACK END\\CRISTIAN YEPEZ\\Clase2-3y4BE\\banca\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\TATIANA\\Banco Pichincha\\BACK END\\CRISTIAN YEPEZ\\Clase2-3y4BE\\banca\\Infrastructure\\Infrastructure.csproj"
+              "C:\\TATIANA\\Banco Pichincha\\BACK END\\BancoPichincha-BackEnd-\\Clase2,3,4 - Practica Api Rest\\banca\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\TATIANA\\Banco Pichincha\\BACK END\\BancoPichincha-BackEnd-\\Clase2,3,4 - Practica Api Rest\\banca\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -77,14 +77,14 @@
         }
       }
     },
-    "C:\\TATIANA\\Banco Pichincha\\BACK END\\CRISTIAN YEPEZ\\Clase2-3y4BE\\banca\\Core\\Core.csproj": {
+    "C:\\TATIANA\\Banco Pichincha\\BACK END\\BancoPichincha-BackEnd-\\Clase2,3,4 - Practica Api Rest\\banca\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\TATIANA\\Banco Pichincha\\BACK END\\CRISTIAN YEPEZ\\Clase2-3y4BE\\banca\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\TATIANA\\Banco Pichincha\\BACK END\\BancoPichincha-BackEnd-\\Clase2,3,4 - Practica Api Rest\\banca\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\TATIANA\\Banco Pichincha\\BACK END\\CRISTIAN YEPEZ\\Clase2-3y4BE\\banca\\Core\\Core.csproj",
+        "projectPath": "C:\\TATIANA\\Banco Pichincha\\BACK END\\BancoPichincha-BackEnd-\\Clase2,3,4 - Practica Api Rest\\banca\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\TATIANA\\Banco Pichincha\\BACK END\\CRISTIAN YEPEZ\\Clase2-3y4BE\\banca\\Core\\obj\\",
+        "outputPath": "C:\\TATIANA\\Banco Pichincha\\BACK END\\BancoPichincha-BackEnd-\\Clase2,3,4 - Practica Api Rest\\banca\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -137,14 +137,14 @@
         }
       }
     },
-    "C:\\TATIANA\\Banco Pichincha\\BACK END\\CRISTIAN YEPEZ\\Clase2-3y4BE\\banca\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\TATIANA\\Banco Pichincha\\BACK END\\BancoPichincha-BackEnd-\\Clase2,3,4 - Practica Api Rest\\banca\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\TATIANA\\Banco Pichincha\\BACK END\\CRISTIAN YEPEZ\\Clase2-3y4BE\\banca\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\TATIANA\\Banco Pichincha\\BACK END\\BancoPichincha-BackEnd-\\Clase2,3,4 - Practica Api Rest\\banca\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\TATIANA\\Banco Pichincha\\BACK END\\CRISTIAN YEPEZ\\Clase2-3y4BE\\banca\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\TATIANA\\Banco Pichincha\\BACK END\\BancoPichincha-BackEnd-\\Clase2,3,4 - Practica Api Rest\\banca\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\TATIANA\\Banco Pichincha\\BACK END\\CRISTIAN YEPEZ\\Clase2-3y4BE\\banca\\Infrastructure\\obj\\",
+        "outputPath": "C:\\TATIANA\\Banco Pichincha\\BACK END\\BancoPichincha-BackEnd-\\Clase2,3,4 - Practica Api Rest\\banca\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -161,8 +161,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\TATIANA\\Banco Pichincha\\BACK END\\CRISTIAN YEPEZ\\Clase2-3y4BE\\banca\\Core\\Core.csproj": {
-                "projectPath": "C:\\TATIANA\\Banco Pichincha\\BACK END\\CRISTIAN YEPEZ\\Clase2-3y4BE\\banca\\Core\\Core.csproj"
+              "C:\\TATIANA\\Banco Pichincha\\BACK END\\BancoPichincha-BackEnd-\\Clase2,3,4 - Practica Api Rest\\banca\\Core\\Core.csproj": {
+                "projectPath": "C:\\TATIANA\\Banco Pichincha\\BACK END\\BancoPichincha-BackEnd-\\Clase2,3,4 - Practica Api Rest\\banca\\Core\\Core.csproj"
               }
             }
           }

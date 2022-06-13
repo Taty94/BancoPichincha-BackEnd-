@@ -7,6 +7,7 @@ using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Core.Interfaces;
 using Microsoft.OpenApi.Models;
+using System.Text.Json.Serialization;
 using Infrastructure;
 
 namespace API
@@ -23,8 +24,9 @@ namespace API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllers().AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve);
             services.AddScoped<IBancaRepository, BancaRepository>();
-            //services.AddScoped<ICuentaRepository, CuentaRepository>();
+            services.AddScoped<ICuentaRepository, CuentaRepository>();
              services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddControllers();
             services.AddDbContext<StoreContext>(x =>

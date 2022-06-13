@@ -34,3 +34,15 @@ C:\TATIANA\Banco Pichincha\BACK END\CRISTIAN YEPEZ\Clase2-3y4BE\banca\Core\obj\D
 C:\TATIANA\Banco Pichincha\BACK END\CRISTIAN YEPEZ\Clase2-3y4BE\banca\Core\obj\Debug\net5.0\Core.dll
 C:\TATIANA\Banco Pichincha\BACK END\CRISTIAN YEPEZ\Clase2-3y4BE\banca\Core\obj\Debug\net5.0\ref\Core.dll
 C:\TATIANA\Banco Pichincha\BACK END\CRISTIAN YEPEZ\Clase2-3y4BE\banca\Core\obj\Debug\net5.0\Core.pdb
+C:\TATIANA\Banco Pichincha\BACK END\BancoPichincha-BackEnd-\Clase2,3,4 - Practica Api Rest\banca\Core\bin\Debug\net5.0\Core.deps.json
+C:\TATIANA\Banco Pichincha\BACK END\BancoPichincha-BackEnd-\Clase2,3,4 - Practica Api Rest\banca\Core\bin\Debug\net5.0\Core.dll
+C:\TATIANA\Banco Pichincha\BACK END\BancoPichincha-BackEnd-\Clase2,3,4 - Practica Api Rest\banca\Core\bin\Debug\net5.0\ref\Core.dll
+C:\TATIANA\Banco Pichincha\BACK END\BancoPichincha-BackEnd-\Clase2,3,4 - Practica Api Rest\banca\Core\bin\Debug\net5.0\Core.pdb
+C:\TATIANA\Banco Pichincha\BACK END\BancoPichincha-BackEnd-\Clase2,3,4 - Practica Api Rest\banca\Core\obj\Debug\net5.0\Core.csproj.AssemblyReference.cache
+C:\TATIANA\Banco Pichincha\BACK END\BancoPichincha-BackEnd-\Clase2,3,4 - Practica Api Rest\banca\Core\obj\Debug\net5.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\TATIANA\Banco Pichincha\BACK END\BancoPichincha-BackEnd-\Clase2,3,4 - Practica Api Rest\banca\Core\obj\Debug\net5.0\Core.AssemblyInfoInputs.cache
+C:\TATIANA\Banco Pichincha\BACK END\BancoPichincha-BackEnd-\Clase2,3,4 - Practica Api Rest\banca\Core\obj\Debug\net5.0\Core.AssemblyInfo.cs
+C:\TATIANA\Banco Pichincha\BACK END\BancoPichincha-BackEnd-\Clase2,3,4 - Practica Api Rest\banca\Core\obj\Debug\net5.0\Core.csproj.CoreCompileInputs.cache
+C:\TATIANA\Banco Pichincha\BACK END\BancoPichincha-BackEnd-\Clase2,3,4 - Practica Api Rest\banca\Core\obj\Debug\net5.0\Core.dll
+C:\TATIANA\Banco Pichincha\BACK END\BancoPichincha-BackEnd-\Clase2,3,4 - Practica Api Rest\banca\Core\obj\Debug\net5.0\ref\Core.dll
+C:\TATIANA\Banco Pichincha\BACK END\BancoPichincha-BackEnd-\Clase2,3,4 - Practica Api Rest\banca\Core\obj\Debug\net5.0\Core.pdb
