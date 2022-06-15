@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Core.Entities;
 using Core.Interfaces;
@@ -18,14 +19,14 @@ namespace Infrastructure
 
         public async Task<IReadOnlyList<Cuenta>> GetCuentasAsync()
         {
-            var cuentas= await _context.Cuentas.Include(u=>u.Usuario).ToListAsync();
+            var cuentas= await _context.Cuentas.Include(c=>c.Usuario).ToListAsync();
             return cuentas;
         }
 
-        // public async Task<Cuenta> GetCuentaByIdAsync(int id)
-        // {
-        //     return await _context.Cuentas.FindAsync(id);
-        // }
+        public async Task<Cuenta> GetCuentaByIdAsync(int id)
+        {
+            return await _context.Cuentas.Where(c=>c.Id == id).Include(c=>c.Usuario).FirstOrDefaultAsync();
+        }
 
         public async Task<Cuenta> CreateUpdateCuenta(Cuenta cuenta)
         {
@@ -61,39 +62,39 @@ namespace Infrastructure
             }
         }
 
-        // public async Task<bool> Deposito(int id, decimal deposito)
-        // {
-        //     try {
-        //         var cuenta = await _context.Cuentas.FindAsync(id);
-        //         if(cuenta!=null){
-        //             cuenta.Saldo = cuenta.Saldo + deposito;
-        //             _context.Cuentas.Update(cuenta);
-        //         }
-        //         await _context.SaveChangesAsync();
-        //         return true;
-        //     }
-        //     catch (Exception ){
-        //         return false;
-        //     }
+        public async Task<bool> Deposit(int id, decimal amount_deposit)
+        {
+            try {
+                var cuenta = await _context.Cuentas.FindAsync(id);
+                if(cuenta!=null){
+                    cuenta.Saldo = cuenta.Saldo + amount_deposit;
+                    _context.Cuentas.Update(cuenta);
+                }
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception ){
+                return false;
+            }
             
-        // }
-        // public async Task<bool> Retiro(int id, decimal retiro)
-        // {
-        //     try {
-        //         var cuenta = await _context.Cuentas.FindAsync(id);
-        //         if(cuenta!=null){
-        //             if(retiro <= cuenta.Saldo){
-        //                 cuenta.Saldo = cuenta.Saldo - retiro;
-        //                 _context.Cuentas.Update(cuenta);
-        //             }
-        //         }
+        }
+        public async Task<bool> Removal(int id, decimal amount_removal)
+        {
+            try {
+                var cuenta = await _context.Cuentas.FindAsync(id);
+                if(cuenta!=null){
+                    if(amount_removal <= cuenta.Saldo){
+                        cuenta.Saldo = cuenta.Saldo - amount_removal;
+                        _context.Cuentas.Update(cuenta);
+                    }
+                }
             
-        //         await _context.SaveChangesAsync();
-        //         return true;
-        //     }
-        //     catch (Exception ){
-        //         return false;
-        //     }
-        // }
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception ){
+                return false;
+            }
+        }
     }
 }

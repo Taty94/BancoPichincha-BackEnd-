@@ -1,10 +1,6 @@
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using Core.Entities;
 using Core.Interfaces;
-using System.Linq;
-
-using Microsoft.EntityFrameworkCore;
 using System;
 
 namespace Infrastructure.Data
@@ -15,16 +11,6 @@ namespace Infrastructure.Data
         public GenericRepository(StoreContext context)
         {
             _context = context;
-        }
-
-        public async Task<IReadOnlyList<T>> ListAllAsync()
-        {
-            return await _context.Set<T>().ToListAsync();
-        }
-
-        public async Task<T> GetByIdAsync(int id)
-        {
-            return await _context.Set<T>().FirstAsync();
         }
 
         public async Task<T> CreateUpdateAsync(T entityObject)
@@ -58,9 +44,5 @@ namespace Infrastructure.Data
                 return false;
             }
         }
-
-        
-
-       
     }
 }

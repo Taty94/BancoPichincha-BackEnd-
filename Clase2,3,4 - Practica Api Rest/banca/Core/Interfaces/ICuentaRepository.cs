@@ -7,11 +7,11 @@ namespace Core.Interfaces
     public interface ICuentaRepository
     {
         Task<IReadOnlyList<Cuenta>> GetCuentasAsync();
-        //Task<Cuenta> CreateUpdateCuenta(Cuenta cuenta);
-        //Task<bool> DeleteCuenta(int id);
+        Task<Cuenta> GetCuentaByIdAsync(int id);
+        //Task<Cuenta> CreateUpdateCuenta(Cuenta cuenta);generico
+        //Task<bool> DeleteCuenta(int id);generico
 
-        
-        // Task<bool> Deposito(int id, decimal deposito);
-        // Task<bool> Retiro(int id, decimal retiro);
+        Task<bool> Deposit(int id, decimal amount_deposit);
+        Task<bool> Removal(int id, decimal amount_removal);
     }
 }

@@ -9,7 +9,6 @@ namespace Core.Entities
         public string Nombre { get; set; }
         public string Email { get; set; }
         public DateTime FechaNacimiento { get; set; }
-        private int Edad { get; set; }
         
     }
     

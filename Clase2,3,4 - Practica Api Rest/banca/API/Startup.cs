@@ -9,6 +9,7 @@ using Core.Interfaces;
 using Microsoft.OpenApi.Models;
 using System.Text.Json.Serialization;
 using Infrastructure;
+using API.Helpers;
 
 namespace API
 {
@@ -27,7 +28,9 @@ namespace API
             services.AddControllers().AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve);
             services.AddScoped<IBancaRepository, BancaRepository>();
             services.AddScoped<ICuentaRepository, CuentaRepository>();
-             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            //Agregar autommaper para formater los datos que retorno
+            services.AddAutoMapper(typeof(MappingProfiles));
             services.AddControllers();
             services.AddDbContext<StoreContext>(x =>
              x.UseSqlite(_config.GetConnectionString("DefaultConnection")));

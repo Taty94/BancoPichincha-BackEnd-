@@ -13,12 +13,11 @@ namespace Infrastructure.Data.Migrations
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Cedula = table.Column<string>(type: "TEXT", nullable: true),
-                    Nombre = table.Column<string>(type: "TEXT", nullable: true),
-                    Email = table.Column<string>(type: "TEXT", nullable: true),
-                    FechaNacimiento = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    Clave = table.Column<string>(type: "TEXT", nullable: true),
-                    TipoCuenta = table.Column<int>(type: "INTEGER", nullable: false)
+                    Clave = table.Column<string>(type: "TEXT", maxLength: 8, nullable: false),
+                    Cedula = table.Column<string>(type: "TEXT", maxLength: 10, nullable: false),
+                    Nombre = table.Column<string>(type: "TEXT", maxLength: 100, nullable: false),
+                    Email = table.Column<string>(type: "TEXT", maxLength: 200, nullable: false),
+                    FechaNacimiento = table.Column<DateTime>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -31,9 +30,9 @@ namespace Infrastructure.Data.Migrations
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    NumCuenta = table.Column<string>(type: "TEXT", nullable: true),
+                    NumCuenta = table.Column<string>(type: "TEXT", maxLength: 10, nullable: false),
                     Tipo = table.Column<int>(type: "INTEGER", nullable: false),
-                    Saldo = table.Column<decimal>(type: "TEXT", nullable: false),
+                    Saldo = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     UsuarioId = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>

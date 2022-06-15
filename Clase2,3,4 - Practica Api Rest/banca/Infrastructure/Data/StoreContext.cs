@@ -17,7 +17,8 @@ namespace Infrastructure.Data
         public DbSet<Cuenta> Cuentas {get; set;}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder){
-            
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
     }
 }

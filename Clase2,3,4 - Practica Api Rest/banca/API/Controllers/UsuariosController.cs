@@ -4,6 +4,8 @@ using Core.Entities;
 using Core.Interfaces;
 using System.Threading.Tasks;
 using System;
+using AutoMapper;
+using API.Dtos;
 
 namespace API.Controllers
 {
@@ -13,30 +15,35 @@ namespace API.Controllers
     {
         private readonly IBancaRepository _repo;
         private readonly IGenericRepository<Usuario> _genrepo;
+        private readonly IMapper _mapper;
 
-        public UsuariosController(IBancaRepository repo, IGenericRepository<Usuario> genrepo){
+        public UsuariosController(IBancaRepository repo,
+                                IGenericRepository<Usuario> genrepo,
+                                IMapper mapper ){
+            _mapper = mapper;
             _genrepo = genrepo;
             _repo = repo;
         }
 
         //GET: api/Usuarios
         [HttpGet]
-        public async Task<ActionResult<List<Usuario>>> GetUsuarios()
+        public async Task<ActionResult<IReadOnlyList<UsuarioToReturnDto>>> GetUsuarios()
         {
-            //var usuarios = await _genrepo.ListAllAsync();
             var usuarios = await _repo.GetUsuariosAsync();
-            return Ok(usuarios);
+            return Ok(_mapper.
+                Map<IReadOnlyList<Usuario>,IReadOnlyList<UsuarioToReturnDto>>(usuarios));
         }
 
         //Get: api/Usuarios/1
         [HttpGet("{id}")]
-        public async Task<ActionResult<Usuario>> GetUsuarioById(int id){
-            var usuario =  await _genrepo.GetByIdAsync(id);
+        public async Task<ActionResult<UsuarioToReturnDto>> GetUsuarioById(int id){
+            var usuario =  await _repo.GetUsuarioByIdAsync(id);
             if(usuario==null){
                 return NotFound(false);
             }else
             {
-                return usuario;
+                return _mapper.Map<Usuario,UsuarioToReturnDto>(usuario);
+                //return Ok(usuario);
             }
         }
 
