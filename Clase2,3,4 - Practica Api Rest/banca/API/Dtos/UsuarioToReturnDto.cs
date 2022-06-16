@@ -8,7 +8,7 @@ namespace API.Dtos
     {
         private int _edad;
         public int Id { get; set; }
-        public string Cedula { get; set; }
+        public int Cedula { get; set; }
         public string Nombre { get; set; }
         public string Email { get; set; }
         public DateTime FechaNacimiento { get; set; } 
@@ -24,7 +24,7 @@ namespace API.Dtos
             }
         }
 
-        private int GetEdad(){
+        public int GetEdad(){
             var today = DateTime.Today;
             var age = today.Year - this.FechaNacimiento.Year;
             if (this.FechaNacimiento.Date > today.AddYears(-age)) 
@@ -33,6 +33,6 @@ namespace API.Dtos
         }
 
         public string Clave { get; set; }  
-        public ICollection<Cuenta> Cuentas { get; set; }    
+        public IReadOnlyList<CuentaToReturnDto> Cuentas { get; set; }    
     }
 }

@@ -14,5 +14,6 @@ namespace API.Dtos
         public decimal Saldo { get; set; }
         public string Propietario { get; set; }
         public string Cedula { get; set; }
+
     }
 }

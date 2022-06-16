@@ -12,6 +12,7 @@ namespace Infrastructure
     public class CuentaRepository : ICuentaRepository
     {
         private readonly StoreContext _context;
+        
 
         public CuentaRepository(StoreContext context){
             _context = context;
@@ -19,8 +20,7 @@ namespace Infrastructure
 
         public async Task<IReadOnlyList<Cuenta>> GetCuentasAsync()
         {
-            var cuentas= await _context.Cuentas.Include(c=>c.Usuario).ToListAsync();
-            return cuentas;
+            return await _context.Cuentas.Include(c=>c.Usuario).ToListAsync();
         }
 
         public async Task<Cuenta> GetCuentaByIdAsync(int id)
@@ -37,7 +37,6 @@ namespace Infrastructure
             }else
             {
                 await _context.Cuentas.AddAsync(cuenta);
-
             }
             
             await _context.SaveChangesAsync();
@@ -69,9 +68,10 @@ namespace Infrastructure
                 if(cuenta!=null){
                     cuenta.Saldo = cuenta.Saldo + amount_deposit;
                     _context.Cuentas.Update(cuenta);
-                }
-                await _context.SaveChangesAsync();
-                return true;
+                    await _context.SaveChangesAsync();
+                    return true;
+                }else return false;
+                
             }
             catch (Exception ){
                 return false;
@@ -87,14 +87,15 @@ namespace Infrastructure
                         cuenta.Saldo = cuenta.Saldo - amount_removal;
                         _context.Cuentas.Update(cuenta);
                     }
-                }
-            
-                await _context.SaveChangesAsync();
-                return true;
+                    await _context.SaveChangesAsync();
+                    return true;
+                }else return false;
             }
             catch (Exception ){
                 return false;
             }
         }
+
+        
     }
 }

@@ -49,10 +49,9 @@ namespace Infrastructure.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Cedula")
-                        .IsRequired()
+                    b.Property<int>("Cedula")
                         .HasMaxLength(10)
-                        .HasColumnType("TEXT");
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Clave")
                         .IsRequired()

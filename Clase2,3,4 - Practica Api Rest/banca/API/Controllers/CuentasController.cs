@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using API.Dtos;
+using API.Errors;
 using AutoMapper;
 using Core.Entities;
 using Core.Interfaces;
@@ -16,35 +17,48 @@ namespace API.Controllers
         private readonly ICuentaRepository _repo;
         private readonly IGenericRepository<Cuenta> _genrepo;
         private readonly IMapper _mapper;
+        private ApiResponse _response;
 
-        public CuentasController(ICuentaRepository repo,
-                             IGenericRepository<Cuenta> genrepo,
-                             IMapper mapper){
+        public CuentasController(ICuentaRepository repo,IGenericRepository<Cuenta> genrepo,IMapper mapper )
+        {
             _mapper = mapper;
             _genrepo = genrepo;
             _repo = repo;
+            _response = new ApiResponse();
         }
 
         //GET: api/Cuentas
         [HttpGet]
         public async Task<ActionResult<IReadOnlyList<CuentaToReturnDto>>> GetCuentas()
         {
-            var cuentas = await _repo.GetCuentasAsync();
-            return Ok(_mapper.
-                Map<IReadOnlyList<Cuenta>,IReadOnlyList<CuentaToReturnDto>>(cuentas));
+            try
+            {
+                var cuentas = await _repo.GetCuentasAsync();
+                _response.Result = _mapper.Map<IReadOnlyList<Cuenta>,IReadOnlyList<CuentaToReturnDto>>(cuentas);;
+                _response.DisplayMessage = "Listado de Cuentas";
+            }
+            catch (Exception ex)
+            {
+                _response.IsSuccess = false;
+                _response.ErrorMessages = new List<string> { ex.ToString() };
+            }
+            return Ok(_response);
         }
 
         //Get: api/Cuentas/1
         [HttpGet("{id}")]
         public async Task<ActionResult<CuentaToReturnDto>> GetCuentaById(int id){
             var cuenta =  await _repo.GetCuentaByIdAsync(id);
-            if(cuenta==null){
-                return NotFound(false);
-            }else
+            if(cuenta==null)
             {
-                return _mapper.Map<Cuenta,CuentaToReturnDto>(cuenta);
-                //return cuenta;
+                _response.IsSuccess = false;
+                _response.DisplayMessage = "Cuenta No Existe";
+                return NotFound(_response);
             }
+            _response.Result = _mapper.Map<Cuenta,CuentaToReturnDto>(cuenta);
+            _response.DisplayMessage = "Informacion de Cuenta";
+            return Ok(_response);
+                
         }
 
         // //Put: api/Cuentas/1
@@ -65,13 +79,20 @@ namespace API.Controllers
         [HttpPost]
         public async Task<ActionResult<Cuenta>> PostCuenta(Cuenta cuenta)
         {
-            try{
+            try
+            {
+                cuenta.GetNumCuenta();
                 var account = await _genrepo.CreateUpdateAsync(cuenta);
-                return CreatedAtAction("GetCuentaById",new {id = account.Id}, account);
+                var cuentaDto = _mapper.Map<Cuenta,CuentaToReturnDto>(account);
+                _response.Result = cuentaDto;
+                return CreatedAtAction("GetCuentaById",new {id = cuentaDto.Id}, _response);//me retorna un status 201 de creado
             }
             catch(Exception ex)
             {
-                return BadRequest(false);
+                _response.IsSuccess = false;
+                _response.DisplayMessage = "Error al guardar la cuenta";
+                _response.ErrorMessages = new List<string> { ex.ToString() };
+                return BadRequest(_response);
             }
         }
 
@@ -81,20 +102,25 @@ namespace API.Controllers
         {
             try
             {
-                bool estaEliminado = await _genrepo.DeteleAsync(id);
-                if(estaEliminado)
+                bool isDeleted = await _genrepo.DeteleAsync(id);
+                if(isDeleted)
                 {
-                    return Ok(estaEliminado);
+                    _response.Result = isDeleted;
+                    _response.DisplayMessage = "Cuenta Eliminada con 'Exito";
+                    return Ok(_response);
                 }
                 else
                 {
-                    return BadRequest(false);
-                }
-        
+                    _response.IsSuccess = false;
+                    _response.DisplayMessage = "Error al Eliminar Cuenta";
+                    return BadRequest(_response);
+                }        
             }
             catch(Exception ex)
             {
-                return BadRequest(false);
+                _response.IsSuccess = false;
+                _response.ErrorMessages = new List<string> { ex.ToString() };
+                return BadRequest(_response);
             }
         }
 
@@ -102,25 +128,40 @@ namespace API.Controllers
         [HttpPut("{transaccion}/{idCuenta}/{cantidad}")]
         public async Task<IActionResult> Transaccion(int transaccion, int id, decimal cantidad){
             bool result = false;
-            switch (transaccion)
-            {
-                case 1:
-                    if(id> 0 && cantidad>0){
-                        result = await _repo.Deposit(id,cantidad);
-                    }
-                break;
-                case 2:
-                    if(id> 0 && cantidad>0){
-                        result = await _repo.Removal(id,cantidad);
-                    }
-                break;
+            var move = "";
+            try {
+                switch (transaccion)
+                {
+                    case 1:
+                        move = "Deposito";
+                        if(id> 0 && cantidad>0){
+                            result = await _repo.Deposit(id,cantidad);
+                        }
+                    break;
+                    case 2:
+                        move = "Retiro";
+                        if(id> 0 && cantidad>0){
+                            result = await _repo.Removal(id,cantidad);
+                        }
+                    break;
+                }
+                if(result)
+                {
+                    _response.Result = result;
+                    _response.DisplayMessage = "El " + move + " con 'Exito";
+                    return Ok(_response);
+                }
+                {
+                    _response.IsSuccess = false;
+                    _response.DisplayMessage = "El " + move + "no se efectuo, intentelo mas tarde";
+                    return BadRequest(_response);
+                }
             }
-            if(result)
+            catch(Exception ex)
             {
-                return Ok(result);
-            }
-            {
-                return BadRequest(result);
+                _response.IsSuccess = false;
+                _response.ErrorMessages = new List<string> { ex.ToString() };
+                return BadRequest(_response);
             }
         }
 

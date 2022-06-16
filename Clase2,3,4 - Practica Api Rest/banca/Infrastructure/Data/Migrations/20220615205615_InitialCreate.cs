@@ -14,7 +14,7 @@ namespace Infrastructure.Data.Migrations
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Clave = table.Column<string>(type: "TEXT", maxLength: 8, nullable: false),
-                    Cedula = table.Column<string>(type: "TEXT", maxLength: 10, nullable: false),
+                    Cedula = table.Column<int>(type: "INTEGER", maxLength: 10, nullable: false),
                     Nombre = table.Column<string>(type: "TEXT", maxLength: 100, nullable: false),
                     Email = table.Column<string>(type: "TEXT", maxLength: 200, nullable: false),
                     FechaNacimiento = table.Column<DateTime>(type: "TEXT", nullable: false)
